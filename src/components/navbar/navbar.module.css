@@ -1,39 +1,101 @@
 .navbar {
-  padding: 1rem 0;
+  border-bottom: 2px solid #000000;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  max-width: 1200px;
+  max-height: 30px;
+  margin: auto;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.logo {
-  margin-right: 0.5rem;
+  height: 4rem;
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+}
+
+.brandText {
+  font-size: 1.25rem;
   font-weight: 600;
-  font-size: 1.125rem;
-  margin-right: auto;
+  color: #111827;
+  text-decoration: none;
+  letter-spacing: -0.025em;
 }
 
 .navLinks {
   display: flex;
   list-style: none;
-  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  align-items: center;
 }
 
-.navLinks li a {
+.navLink {
+  color: #6b7280;
   text-decoration: none;
-  color: #1f2937;
+  font-size: 0.875rem;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
+  padding: 0.5rem 0;
 }
 
-.navLinks li a:hover {
-  color: #3b82f6; /* Tailwind's blue-500 */
+.navLink:hover {
+  color: #111827;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeToggle:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.themeIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+  
+  .navLinks {
+    gap: 1.5rem;
+  }
+  
+  .navLink {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navLinks {
+    gap: 1rem;
+  }
+  
+  .brandText {
+    font-size: 1.125rem;
+  }
 }
