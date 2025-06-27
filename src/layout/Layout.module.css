@@ -12,6 +12,10 @@
   max-width: 800px;
 }
 
+.main {
+  margin-top: 25px;
+}
+
 
 @media (max-width: 860px) {
   .container {

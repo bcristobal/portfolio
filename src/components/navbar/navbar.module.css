@@ -8,9 +8,8 @@
 
 .container {
   max-width: 1200px;
-  max-height: 30px;
   margin: auto;
-  padding: 0;
+  padding: 0; /* Añadido padding horizontal */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,7 +39,7 @@
 }
 
 .navLink {
-  color: #6b7280;
+  color: #46484d;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
@@ -56,13 +55,15 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.25rem; /* Reducido el padding */
+  margin: 0.25rem; /* Añadido margen para mantener área clickeable */
   border-radius: 0.375rem;
   color: #6b7280;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* Evita que se comprima */
 }
 
 .themeToggle:hover {
@@ -78,7 +79,7 @@
 /* Mobile responsive */
 @media (max-width: 768px) {
   .container {
-    padding: 0;
+    padding: 0; /* Padding ajustado para móvil */
   }
   
   .navLinks {
@@ -88,14 +89,28 @@
   .navLink {
     font-size: 0.8rem;
   }
+  
+  .themeToggle {
+    padding: 0.2rem;
+    margin: 0.2rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
+  
   .navLinks {
     gap: 1rem;
   }
   
   .brandText {
     font-size: 1.125rem;
+  }
+  
+  .themeToggle {
+    padding: 0.15rem;
+    margin: 0.15rem;
   }
 }
