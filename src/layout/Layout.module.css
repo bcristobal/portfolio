@@ -1,9 +1,31 @@
+/* CSS Custom Properties for theming */
+:root {
+  --bg-primary: #f4f4f4;
+  --text-primary: #111827;
+  --text-secondary: #46484d;
+  --text-muted: #6b7280;
+  --border-color: #000000;
+  --hover-bg: #f3f4f6;
+  --footer-text: #46484d;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --border-color: #374151;
+  --hover-bg: #374151;
+  --footer-text: #9ca3af;
+}
+
 .body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -16,6 +38,13 @@
   margin-top: 25px;
 }
 
+.footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  color: var(--footer-text);
+}
 
 @media (max-width: 860px) {
   .container {

@@ -1,15 +1,17 @@
 .navbar {
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid var(--border-color);
   padding: 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 0; /* Añadido padding horizontal */
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,9 +26,10 @@
 .brandText {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-primary);
   text-decoration: none;
   letter-spacing: -0.025em;
+  transition: color 0.3s ease;
 }
 
 .navLinks {
@@ -39,7 +42,7 @@
 }
 
 .navLink {
-  color: #46484d;
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
@@ -48,27 +51,27 @@
 }
 
 .navLink:hover {
-  color: #111827;
+  color: var(--text-primary);
 }
 
 .themeToggle {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.25rem; /* Reducido el padding */
-  margin: 0.25rem; /* Añadido margen para mantener área clickeable */
+  padding: 0.25rem;
+  margin: 0.25rem;
   border-radius: 0.375rem;
-  color: #6b7280;
+  color: var(--text-muted);
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; /* Evita que se comprima */
+  flex-shrink: 0;
 }
 
 .themeToggle:hover {
-  background-color: #f3f4f6;
-  color: #111827;
+  background-color: var(--hover-bg);
+  color: var(--text-primary);
 }
 
 .themeIcon {
@@ -79,7 +82,7 @@
 /* Mobile responsive */
 @media (max-width: 768px) {
   .container {
-    padding: 0; /* Padding ajustado para móvil */
+    padding: 0;
   }
   
   .navLinks {
