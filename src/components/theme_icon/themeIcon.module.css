@@ -23,6 +23,43 @@
     height: 1.25rem;
 }
 
+/* Theme-specific icon visibility */
+.sun { 
+    fill: var(--text-muted); 
+    transition: fill 0.2s ease;
+}
+
+.moon { 
+    fill: transparent; 
+    transition: fill 0.2s ease;
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .sun { 
+    fill: transparent; 
+}
+
+[data-theme="dark"] .moon { 
+    fill: var(--text-muted); 
+}
+
+/* Hover effects for icons */
+.themeToggle:hover .sun {
+    fill: var(--text-primary);
+}
+
+.themeToggle:hover .moon {
+    fill: var(--text-primary);
+}
+
+[data-theme="dark"] .themeToggle:hover .sun {
+    fill: transparent;
+}
+
+[data-theme="dark"] .themeToggle:hover .moon {
+    fill: var(--text-primary);
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
     .themeToggle {
